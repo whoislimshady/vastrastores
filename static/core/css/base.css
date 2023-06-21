@@ -44,67 +44,125 @@ html, body, p, div{
     font-weight: 500;
 }
 
-
-/* Navigation-Main*/
-
-/* xs */
-.logo {
-    width: 49px;
-    height: auto;
-}
-/* sm */
-@media (min-width: 768px) {
-    .logo {
-        width: 49px;
-    }
-}
-/* md */
-@media (min-width: 992px) {
-    .logo {
-        width: 60px;
-    }
-}
-/* lg */
-@media (min-width: 1200px) {
-    .logo {
-        width: 70px;
-    }
-}
-
-/* Basket Menu */
-
-.basket-qty{
+/* Add gradient background to navbar */
+.navbar {
+    background: linear-gradient(to right, #E4F1FF, #172b4d);
+    border-bottom: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Add border-radius for rounded edges */
+  }
+  
+  /* Remove border and background color from navbar-toggler */
+  .navbar-toggler {
+    border: none;
+    background-color: transparent;
+  }
+  
+  /* Add gradient color to navbar-brand */
+  .navbar-brand svg path {
+    fill: linear-gradient(to right, #FFCA28, #FF5722);
+  }
+  
+  /* Add gradient color to navbar-link */
+  .navbar-nav .nav-link {
+    color: linear-gradient(to right, #333, #FFF);
+    border-radius: 10px; /* Add border-radius for rounded edges */
+    transition: background-color 0.3s; /* Add transition for smooth hover effect */
+  }
+  
+  /* Add hover effect to navbar-link */
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link:focus {
+    color: #d42114;
+    background-color: transparent;
+  }
+  
+  /* Add gradient color to dropdown-toggle */
+  .dropdown-toggle::after {
+    display: none;
+    background: linear-gradient(to right, #333, #172b4d);
+  }
+  
+  /* Add gradient color to dropdown-item */
+  .dropdown-menu .dropdown-item {
+    color: #333;
+    background: linear-gradient(to right, #fff, #172b4d);
+    border-radius: 10px; /* Add border-radius for rounded edges */
+  }
+  
+  /* Add hover effect to dropdown-item */
+  .dropdown-menu .dropdown-item:hover,
+  .dropdown-menu .dropdown-item:focus {
+    color: #172b4d;
+    background-color: #172b4d;
+  }
+  
+  /* Add gradient color to basket-btn */
+  .basket-btn {
     color: #fff;
-    background: #d42114;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 11px;
-    height: 15px;
-    width: 14px;
-    position: absolute;
-    box-sizing: content-box;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 1px;
-    right: 10px;
-}
-
-.basket-btn{
-    position: relative;
-}
-
-.basket-btn:hover, .basket-btn:focus, .basket-btn:active, .basket-btn.active{
-    color:#d42114;
-    transition-duration: 0.4s;
+    background: linear-gradient(to right, #fff, #768eb8);
+    border: none;
+    border-radius: 10px; /* Add border-radius for rounded edges */
+    transition: background-color 0.3s; /* Add transition for smooth hover effect */
+  }
+  
+  /* Add hover effect to basket-btn */
+  .basket-btn:hover,
+  .basket-btn:focus,
+  .basket-btn:active,
+  .basket-btn.active {
+    color: #d42114;
     background-color: #fff;
+  }
+  
+  .basket-qty {
+    background: linear-gradient(to right, #8aafef, #172b4d);
+    border-radius: 10px; /* Adjust the border-radius value for rounded edges */
+    width: 40px; /* Adjust the width as needed */
+    height: 25px; /* Adjust the height as needed */
+  }
+  
+
+  /* Footer */
+/* Update background color and styling for footer */
+body {
+    margin: 0; /* Remove default body margin */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Make sure the body covers the full height of the viewport */
+  }
+  
+  html {
+    height: 100%; /* Make sure the html element covers the full height of the viewport */
+  }
+  
+.footer {
+  background: linear-gradient(to right, #c6cacf, #172b4d);
+  border-radius: 15px;
+  padding: 10px 20px; /* Update the padding values */
+  color: #ffffff; /* Set text color to white */
+  text-align: center; /* Center align the content */
+  width: 100%; /* Make the footer cover the width of the screen */
+  box-sizing: border-box; /* Include padding in the width calculation */
 }
+  
+  /* Update styling for footer list items */
+  .footer > div > div > ul > li {
+    padding: 8px 12px;
+    border-radius: 10px; /* Make the list items round */
+    background-color: #172b4d; /* Update the background color */
+    color: #ffffff; /* Set text color to white */
+    margin-bottom: 10px; /* Add separation between the list items */
+  }
+  
 
-
-/* Footer */
-
-.footer > div > div > ul > li{
-    padding-bottom:8px;
-}
+/* Update color of text inside the footer list items */
+.footer > div > div > ul > li a {
+    color: #ffffff;
+  }
+  
+  /* Add hover effect to footer list items */
+  .footer > div > div > ul > li:hover {
+    background-color: #0e2036; /* Update the hover background color */
+  }
+  
