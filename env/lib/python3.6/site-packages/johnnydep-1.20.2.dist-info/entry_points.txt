@@ -1,0 +1,3 @@
+[console_scripts]
+johnnydep = johnnydep.cli:main
+pipper = johnnydep.pipper:main
