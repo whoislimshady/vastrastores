@@ -7,8 +7,7 @@ SECRET_KEY = "3xk*)i0x#k$btl=(6q)te!19=mp6d)lm1+zl#ts4ewxi3-!vm_"
 
 DEBUG = True
 
-ALLOWED_HOST = ['web-production-17cb.up.railway.app','*']
-
+ALLOWED_HOST = ["web-production-17cb.up.railway.app", "*"]
 
 
 INSTALLED_APPS = [
@@ -91,8 +90,8 @@ USE_L10N = True
 USE_TZ = True
 
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 
 STATIC_URL = "/static/"
