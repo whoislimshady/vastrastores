@@ -13,7 +13,75 @@
 {% endfor %}
 </div>
 {% endif %}
-  <div class="row g-3">
+
+  {% verbatim %}
+  <style>
+  .product-card {
+    background: linear-gradient(to right, #c6cacf, #172b4d);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .product-card .h3 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .product-card .text-muted {
+    font-size: 14px;
+    color: #999;
+  }
+
+  .product-card label {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .product-card select {
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 0 8px;
+  }
+
+  .product-card button,
+  .product-card a.btn {
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+  .product-card button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+  }
+
+  .product-card a.btn {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #ccc;
+    text-decoration: none;
+  }
+
+  .product-card button:hover,
+  .product-card a.btn:hover {
+    background-color: #218838;
+    color: #fff;
+  }
+  </style>
+  {% endverbatim %}
+  <div class="row g-3 product-card">
     <div class="col-md-5 ps-3 col-lg-5 order-md-last p-0 order-1">
       <div class="d-grid gap-2">
         <div class="d-flex d-flex-inline justify-content-between">
@@ -27,6 +95,15 @@
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
+            </select>
+          </div>
+          <div>
+            <label for="Select">Size</label>
+            <select id="select" class="h6 store-select-dropdown">
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
             </select>
           </div>
         </div>
@@ -71,6 +148,7 @@
         data: {
           productid: $('#add-button').val(),
           productqty: $('#select option:selected').text(),
+          productSize: $('#Select option:selected').text(),
           csrfmiddlewaretoken: "{{csrf_token}}",
           action: 'post'
         },

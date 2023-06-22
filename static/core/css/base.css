@@ -46,25 +46,29 @@ html, body, p, div{
 
 /* Add gradient background to navbar */
 .navbar {
-    background: linear-gradient(to right, #E4F1FF, #172b4d);
+    background: linear-gradient(to right, #c6cacf, #172b4d);
     border-bottom: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px; /* Add border-radius for rounded edges */
+    color: #FFF; 
   }
   
   /* Remove border and background color from navbar-toggler */
   .navbar-toggler {
+    color: #FFF;
     border: none;
     background-color: transparent;
   }
   
   /* Add gradient color to navbar-brand */
   .navbar-brand svg path {
+    color: #000000;
     fill: linear-gradient(to right, #FFCA28, #FF5722);
   }
   
   /* Add gradient color to navbar-link */
   .navbar-nav .nav-link {
+    color: #FFF;
     color: linear-gradient(to right, #333, #FFF);
     border-radius: 10px; /* Add border-radius for rounded edges */
     transition: background-color 0.3s; /* Add transition for smooth hover effect */
@@ -79,13 +83,15 @@ html, body, p, div{
   
   /* Add gradient color to dropdown-toggle */
   .dropdown-toggle::after {
+    color: #FFF;
     display: none;
     background: linear-gradient(to right, #333, #172b4d);
   }
   
   /* Add gradient color to dropdown-item */
   .dropdown-menu .dropdown-item {
-    color: #333;
+    color: #FFF;
+
     background: linear-gradient(to right, #fff, #172b4d);
     border-radius: 10px; /* Add border-radius for rounded edges */
   }
@@ -93,7 +99,7 @@ html, body, p, div{
   /* Add hover effect to dropdown-item */
   .dropdown-menu .dropdown-item:hover,
   .dropdown-menu .dropdown-item:focus {
-    color: #172b4d;
+    color: #FFF;
     background-color: #172b4d;
   }
   
