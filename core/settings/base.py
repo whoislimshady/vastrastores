@@ -9,6 +9,8 @@ DEBUG = True
 
 ALLOWED_HOST = ["web-production-17cb.up.railway.app", "*"]
 
+ALLOWED_HOSTS = ["web-production-17cb.up.railway.app", "*"]
+
 
 INSTALLED_APPS = [
     "django.contrib.admin",
