@@ -1,5 +1,6 @@
-{% extends "../base.html" %} {% block title %} {% if category %}{{ category.name
-}}{% else %}Products{% endif %} {% endblock %} {% block content %}
+{% extends "../base.html" %} 
+{% block title %}{% if category %}{{category.name}}{% else %}Products{% endif %}{% endblock %} 
+{% block content %}
 
 <div class="container" style="max-width: 1000px">
   <div class="col-12">
@@ -23,14 +24,12 @@
         {% for product in products %}
         <div class="col">
           <div class="card border-0">
-            {% for image in product.product_image.all %} {% if
-            image.is_feature%}
+            {% for image in product.product_image.all %} {% if image.is_feature%}
             <img
               class="img-fluid"
               alt="Responsive image"
               src="{{ image.image.url }}"
-              alt="{{ image.image.alt_text }}"
-            />
+              alt="{{ image.image.alt_text }}"/>
             {% endif %} 
             {% endfor %}
             <div class="card-body px-0">
