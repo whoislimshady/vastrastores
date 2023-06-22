@@ -11,7 +11,6 @@ ALLOWED_HOST = ["web-production-17cb.up.railway.app", "*"]
 
 ALLOWED_HOSTS = ["web-production-17cb.up.railway.app", "*"]
 
-Ali = "a"
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
